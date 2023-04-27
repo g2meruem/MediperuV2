@@ -1,37 +1,101 @@
-<div class="grid">
-	<div class="col-12">
-		<div class="card">
-			<h5>Tree</h5>
-			<p-tree [value]="files1" selectionMode="checkbox" [(selection)]="selectedFiles1"></p-tree>
-		</div>
-	</div>
-	<div class="col-12">
-		<div class="card">
-			<h5>TreeTable</h5>
-			<p-treeTable [value]="files2" [columns]="cols" selectionMode="checkbox" [(selection)]="selectedFiles2">
-				<ng-template pTemplate="header" let-columns>
-					<tr>
-						<th *ngFor="let col of columns">
-							{{col.header}}
-						</th>
-					</tr>
-				</ng-template>
-				<ng-template pTemplate="body" let-rowNode let-rowData="rowData" let-columns="columns">
-					<tr>
-						<td *ngFor="let col of columns; let i = index">
-							<p-treeTableToggler [rowNode]="rowNode" *ngIf="i === 0"></p-treeTableToggler>
-							<p-treeTableCheckbox [value]="rowNode" *ngIf="i === 0"></p-treeTableCheckbox>
-							{{rowData[col.field]}}
-						</td>
-					</tr>
-				</ng-template>
-			</p-treeTable>
-		</div>
-	</div>
-	<div class="col-12">
-		<div class="card">
-			<h5>Horizontal Tree</h5>
-			<p-tree [value]="files3" layout="horizontal" selectionMode="single" [(selection)]="selectedFiles3"></p-tree>
-		</div>
-	</div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        th, td {
+          padding: 20px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+
+        th {
+          background-color: #f2f2f2;
+        }
+
+        tr:hover {
+          background-color: #f5f5f5;
+        }
+      </style>
+  </head>
+
+  <body>
+    <div class="grid">
+      <div class="col-12">
+        <div class="card">
+          <h5>Tabla de citas pendientes</h5>
+          <table>
+            <thead>
+              <tr>
+                <th>Fecha de la cita</th>
+                <th>Hora de la cita</th>
+                <th>Paciente</th>
+                <th>Descripción de la cita</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>29/04/2023</td>
+                <td>10:30 AM</td>
+                <td>John Doe</td>
+                <td>Revisión anual de salud</td>
+              </tr>
+              <tr>
+                <td>30/04/2023</td>
+                <td>2:00 PM</td>
+                <td>Jane Smith</td>
+                <td>Consulta por dolor de cabeza</td>
+              </tr>
+              <tr>
+                <td>02/05/2023</td>
+                <td>9:15 AM</td>
+                <td>Michael Johnson</td>
+                <td>Seguimiento de tratamiento para la diabetes</td>
+              </tr>
+              <tr>
+                <td>05/05/2023</td>
+                <td>3:30 PM</td>
+                <td>Samantha Lee</td>
+                <td>Examen físico para certificado de trabajo</td>
+              </tr>
+              <tr>
+                <td>08/05/2023</td>
+                <td>11:00 AM</td>
+                <td>David Rodriguez</td>
+                <td>Consulta por dolor de espalda</td>
+              </tr>
+              <tr>
+                <td>10/05/2023</td>
+                <td>2:30 PM</td>
+                <td>Emily Wilson</td>
+                <td>Revisión prenatal</td>
+              </tr>
+              <tr>
+                <td>12/05/2023</td>
+                <td>4:45 PM</td>
+                <td>William Davis</td>
+                <td>Consulta por fiebre y dolor de garganta</td>
+              </tr>
+              <tr>
+                <td>15/05/2023</td>
+                <td>9:00 AM</td>
+                <td>Isabella Brown</td>
+                <td>Examen físico para certificado escolar</td>
+              </tr>
+              <tr>
+                <td>18/05/2023</td>
+                <td>1:15 PM</td>
+                <td>Oliver Thompson</td>
+                <td>Seguimiento de tratamiento para la hipertensión</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
