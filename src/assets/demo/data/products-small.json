@@ -7,7 +7,7 @@
 			"description": "Product Description",
 			"image": "paracetamol.png",
 			"price": 65,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 24,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5
@@ -19,7 +19,7 @@
 			"description": "Product Description",
 			"image": "ibuprofeno.png",
 			"price": 72,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 61,
 			"inventoryStatus": "INSTOCK",
 			"rating": 4
@@ -27,11 +27,11 @@
 		{
 			"id": "1002",
 			"code": "zz21cz3c1",
-			"name": "Blue Band",
+			"name": "Aspirina",
 			"description": "Product Description",
-			"image": "blue-band.jpg",
+			"image": "aspirina.png",
 			"price": 79,
-			"category": "Fitness",
+			"category": "Medicamentos",
 			"quantity": 2,
 			"inventoryStatus": "LOWSTOCK",
 			"rating": 3
@@ -39,11 +39,11 @@
 		{
 			"id": "1003",
 			"code": "244wgerg2",
-			"name": "Blue T-Shirt",
+			"name": "Amoxicilina",
 			"description": "Product Description",
-			"image": "blue-t-shirt.jpg",
+			"image": "amoxicilina.png",
 			"price": 29,
-			"category": "Clothing",
+			"category": "Medicamentos",
 			"quantity": 25,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5
@@ -51,11 +51,11 @@
 		{
 			"id": "1004",
 			"code": "h456wer53",
-			"name": "Bracelet",
+			"name": "Ciprofloxacina",
 			"description": "Product Description",
-			"image": "bracelet.jpg",
+			"image": "Ciprofloxacina.jpg",
 			"price": 15,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 73,
 			"inventoryStatus": "INSTOCK",
 			"rating": 4
@@ -63,11 +63,11 @@
 		{
 			"id": "1005",
 			"code": "av2231fwg",
-			"name": "Brown Purse",
+			"name": "Diclofenac",
 			"description": "Product Description",
 			"image": "brown-purse.jpg",
 			"price": 120,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 0,
 			"inventoryStatus": "OUTOFSTOCK",
 			"rating": 4
@@ -75,11 +75,11 @@
 		{
 			"id": "1006",
 			"code": "bib36pfvm",
-			"name": "Chakra Bracelet",
+			"name": "Omeprazol",
 			"description": "Product Description",
-			"image": "chakra-bracelet.jpg",
+			"image": "chakra-Ciprofloxacina.jpg",
 			"price": 32,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 5,
 			"inventoryStatus": "LOWSTOCK",
 			"rating": 3
@@ -91,7 +91,7 @@
 			"description": "Product Description",
 			"image": "galaxy-earrings.jpg",
 			"price": 34,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 23,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5

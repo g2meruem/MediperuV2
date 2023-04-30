@@ -283,7 +283,7 @@ export class MenusComponent implements OnInit {
         this.breadcrumbItems.push({ label: 'Electronics' });
         this.breadcrumbItems.push({ label: 'Computer' });
         this.breadcrumbItems.push({ label: 'Notebook' });
-        this.breadcrumbItems.push({ label: 'Accessories' });
+        this.breadcrumbItems.push({ label: 'Medicamentos' });
         this.breadcrumbItems.push({ label: 'Backpacks' });
         this.breadcrumbItems.push({ label: 'Item' });
 

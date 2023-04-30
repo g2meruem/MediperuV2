@@ -7,7 +7,7 @@
 			"description": "Product Description",
 			"image": "galaxy-earrings.jpg",
 			"price": 34,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 23,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5
@@ -19,7 +19,7 @@
 			"description": "Product Description",
 			"image": "shoes.jpg",
 			"price": 64,
-			"category": "Clothing",
+			"category": "Medicamentos",
 			"quantity": 0,
 			"inventoryStatus": "INSTOCK",
 			"rating": 4
@@ -31,7 +31,7 @@
 			"description": "Product Description",
 			"image": "lime-band.jpg",
 			"price": 79,
-			"category": "Fitness",
+			"category": "Medicamentos",
 			"quantity": 12,
 			"inventoryStatus": "INSTOCK",
 			"rating": 3
@@ -51,11 +51,11 @@
 		{
 			"id": "1002",
 			"code": "zz21cz3c1",
-			"name": "Blue Band",
+			"name": "Aspirina",
 			"description": "Product Description",
-			"image": "blue-band.jpg",
+			"image": "aspirina.png",
 			"price": 79,
-			"category": "Fitness",
+			"category": "Medicamentos",
 			"quantity": 2,
 			"inventoryStatus": "LOWSTOCK",
 			"rating": 3
@@ -67,7 +67,7 @@
 			"description": "Product Description",
 			"image": "ibuprofeno.png",
 			"price": 72,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 61,
 			"inventoryStatus": "OUTOFSTOCK",
 			"rating": 4
@@ -75,11 +75,11 @@
 		{
 			"id": "1003",
 			"code": "244wgerg2",
-			"name": "Blue T-Shirt",
+			"name": "Amoxicilina",
 			"description": "Product Description",
-			"image": "blue-t-shirt.jpg",
+			"image": "amoxicilina.png",
 			"price": 29,
-			"category": "Clothing",
+			"category": "Medicamentos",
 			"quantity": 25,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5
@@ -91,7 +91,7 @@
 			"description": "Product Description",
 			"image": "pink-band.jpg",
 			"price": 79,
-			"category": "Fitness",
+			"category": "Medicamentos",
 			"quantity": 63,
 			"inventoryStatus": "INSTOCK",
 			"rating": 4
@@ -99,11 +99,11 @@
 		{
 			"id": "1006",
 			"code": "bib36pfvm",
-			"name": "Chakra Bracelet",
+			"name": "Omeprazol",
 			"description": "Product Description",
-			"image": "chakra-bracelet.jpg",
+			"image": "chakra-Ciprofloxacina.jpg",
 			"price": 32,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 5,
 			"inventoryStatus": "LOWSTOCK",
 			"rating": 3
@@ -115,7 +115,7 @@
 			"description": "Product Description",
 			"image": "sneakers.jpg",
 			"price": 78,
-			"category": "Clothing",
+			"category": "Medicamentos",
 			"quantity": 52,
 			"inventoryStatus": "INSTOCK",
 			"rating": 4
@@ -139,7 +139,7 @@
 			"description": "Product Description",
 			"image": "gold-phone-case.jpg",
 			"price": 24,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 0,
 			"inventoryStatus": "OUTOFSTOCK",
 			"rating": 4
@@ -163,7 +163,7 @@
 			"description": "Product Description",
 			"image": "light-green-t-shirt.jpg",
 			"price": 49,
-			"category": "Clothing",
+			"category": "Medicamentos",
 			"quantity": 34,
 			"inventoryStatus": "INSTOCK",
 			"rating": 4
@@ -175,7 +175,7 @@
 			"description": "Product Description",
 			"image": "green-t-shirt.jpg",
 			"price": 49,
-			"category": "Clothing",
+			"category": "Medicamentos",
 			"quantity": 74,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5
@@ -199,7 +199,7 @@
 			"description": "Product Description",
 			"image": "mini-speakers.jpg",
 			"price": 85,
-			"category": "Clothing",
+			"category": "Medicamentos",
 			"quantity": 42,
 			"inventoryStatus": "INSTOCK",
 			"rating": 4
@@ -207,11 +207,11 @@
 		{
 			"id": "1005",
 			"code": "av2231fwg",
-			"name": "Brown Purse",
+			"name": "Diclofenac",
 			"description": "Product Description",
 			"image": "brown-purse.jpg",
 			"price": 120,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 0,
 			"inventoryStatus": "OUTOFSTOCK",
 			"rating": 4
@@ -223,7 +223,7 @@
 			"description": "Product Description",
 			"image": "painted-phone-case.jpg",
 			"price": 56,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 41,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5
@@ -235,7 +235,7 @@
 			"description": "Product Description",
 			"image": "pink-purse.jpg",
 			"price": 110,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 0,
 			"inventoryStatus": "OUTOFSTOCK",
 			"rating": 4
@@ -247,7 +247,7 @@
 			"description": "Product Description",
 			"image": "purple-band.jpg",
 			"price": 79,
-			"category": "Fitness",
+			"category": "Medicamentos",
 			"quantity": 6,
 			"inventoryStatus": "LOWSTOCK",
 			"rating": 3
@@ -259,7 +259,7 @@
 			"description": "Product Description",
 			"image": "purple-gemstone-necklace.jpg",
 			"price": 45,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 62,
 			"inventoryStatus": "INSTOCK",
 			"rating": 4
@@ -271,7 +271,7 @@
 			"description": "Product Description",
 			"image": "purple-t-shirt.jpg",
 			"price": 49,
-			"category": "Clothing",
+			"category": "Medicamentos",
 			"quantity": 2,
 			"inventoryStatus": "LOWSTOCK",
 			"rating": 5
@@ -283,7 +283,7 @@
 			"description": "Product Description",
 			"image": "yoga-mat.jpg",
 			"price": 20,
-			"category": "Fitness",
+			"category": "Medicamentos",
 			"quantity": 15,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5
@@ -307,7 +307,7 @@
 			"description": "Product Description",
 			"image": "paracetamol.png",
 			"price": 65,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 24,
 			"inventoryStatus": "INSTOCK",
 			"rating": 5
@@ -319,7 +319,7 @@
 			"description": "Product Description",
 			"image": "grey-t-shirt.jpg",
 			"price": 48,
-			"category": "Clothing",
+			"category": "Medicamentos",
 			"quantity": 0,
 			"inventoryStatus": "OUTOFSTOCK",
 			"rating": 3
@@ -331,7 +331,7 @@
 			"description": "Product Description",
 			"image": "teal-t-shirt.jpg",
 			"price": 49,
-			"category": "Clothing",
+			"category": "Medicamentos",
 			"quantity": 3,
 			"inventoryStatus": "LOWSTOCK",
 			"rating": 3
@@ -339,11 +339,11 @@
 		{
 			"id": "1004",
 			"code": "h456wer53",
-			"name": "Bracelet",
+			"name": "Ciprofloxacina",
 			"description": "Product Description",
-			"image": "bracelet.jpg",
+			"image": "Ciprofloxacina.jpg",
 			"price": 15,
-			"category": "Accessories",
+			"category": "Medicamentos",
 			"quantity": 73,
 			"inventoryStatus": "INSTOCK",
 			"rating": 4
@@ -355,7 +355,7 @@
 			"description": "Product Description",
 			"image": "yoga-set.jpg",
 			"price": 20,
-			"category": "Fitness",
+			"category": "Medicamentos",
 			"quantity": 25,
 			"inventoryStatus": "INSTOCK",
 			"rating": 8
