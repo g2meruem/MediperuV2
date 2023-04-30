@@ -280,7 +280,7 @@ export class MenusComponent implements OnInit {
         ];
 
         this.breadcrumbItems = [];
-        this.breadcrumbItems.push({ label: 'Electronics' });
+        this.breadcrumbItems.push({ label: 'Medicamentos' });
         this.breadcrumbItems.push({ label: 'Computer' });
         this.breadcrumbItems.push({ label: 'Notebook' });
         this.breadcrumbItems.push({ label: 'Medicamentos' });
@@ -321,7 +321,7 @@ export class MenusComponent implements OnInit {
                 ]
             },
             {
-                label: 'Electronics', icon: 'pi pi-fw pi-desktop',
+                label: 'Medicamentos', icon: 'pi pi-fw pi-desktop',
                 items: [
                     [
                         {
