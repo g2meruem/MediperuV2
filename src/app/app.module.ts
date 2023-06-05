@@ -13,11 +13,6 @@ import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
 import { PasswordModule } from 'primeng/password';
 import { RegisterModule } from './register/register.module';
-import { AngularFireModule } from "@angular/fire/compat";
-import { AngularFireAuthModule } from "@angular/fire/compat/auth";
-import { environment } from '../environments/environment';
-
-
 @NgModule({
     declarations: [
         AppComponent, NotfoundComponent
@@ -26,9 +21,7 @@ import { environment } from '../environments/environment';
         AppRoutingModule,
         AppLayoutModule,
         PasswordModule,
-        RegisterModule,
-        AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule
+        RegisterModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
