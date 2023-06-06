@@ -21,12 +21,13 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Herramientas',
+                label: 'Secciones',
                 items: [
                     { label: 'Alta de Pacientes', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
                     { label: 'Tabla de pacientes', icon: 'pi pi-fw pi-table', routerLink: ['/uikit/table'] },
                     { label: 'Solicitar medicamentos', icon: 'pi pi-fw pi-list', routerLink: ['/uikit/list'] },
-                    { label: 'Citas pendientes', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree'] }
+                    { label: 'Citas pendientes', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree'] },
+                    { label: 'Solicitar cita', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/appointment-request'] },
                 ]
             },
 

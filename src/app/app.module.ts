@@ -12,7 +12,11 @@ import { IconService } from './demo/service/icon.service';
 import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
 import { PasswordModule } from 'primeng/password';
-
+import { FormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 @NgModule({
     declarations: [
         AppComponent, NotfoundComponent
@@ -21,6 +25,7 @@ import { PasswordModule } from 'primeng/password';
         AppRoutingModule,
         AppLayoutModule,
         PasswordModule,
+        FormsModule,
 
     ],
     providers: [

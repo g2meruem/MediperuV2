@@ -1,23 +1,27 @@
 import { Component } from '@angular/core';
-import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    styles: [`
-        :host ::ng-deep .pi-eye,
-        :host ::ng-deep .pi-eye-slash {
-            transform:scale(1.6);
-            margin-right: 1rem;
-            color: var(--primary-color) !important;
-        }
-    `]
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+    email: string = '';
+    password: string = '';
 
-    valCheck: string[] = ['remember'];
+  constructor(private auth: AngularFireAuth, private router: Router) { }
 
-    password!: string;
-
-    constructor(public layoutService: LayoutService) { }
+  signIn() {
+    this.auth.signInWithEmailAndPassword(this.email, this.password)
+      .then(() => {
+        // Inicio de sesión exitoso, redirigir a la página de inicio
+        this.router.navigate(['/dashboard']);
+      })
+      .catch(error => {
+        // Error en el inicio de sesión, mostrar mensaje de error
+        console.log('Error de inicio de sesión:', error);
+      });
+  }
 }

@@ -1,0 +1,31 @@
+<div class="card">
+    <h5>Solicitud de Cita Médica</h5>
+    <form (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" class="p-inputtext" [(ngModel)]="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="p-inputtext" [(ngModel)]="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Teléfono:</label>
+        <input type="tel" id="phone" class="p-inputtext" [(ngModel)]="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Fecha de la cita:</label>
+        <input type="date" id="date" class="p-inputtext" [(ngModel)]="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comentarios:</label>
+        <textarea id="comments" class="p-inputtextarea" rows="4" [(ngModel)]="comments"></textarea>
+      </div>
+
+      <button type="submit" class="p-button p-button-success">Solicitar Cita</button>
+    </form>
+  </div>
