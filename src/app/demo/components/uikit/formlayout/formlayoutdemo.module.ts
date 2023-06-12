@@ -28,7 +28,7 @@ import { InputTextModule } from "primeng/inputtext";
 		CascadeSelectModule,
 		MultiSelectModule,
 		InputTextareaModule,
-		InputTextModule
+		InputTextModule,
 	],
 	declarations: [FormLayoutDemoComponent]
 })

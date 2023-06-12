@@ -1,33 +1,44 @@
-	<div class="col-12">
-		<div class="card">
-			<h5>Alta de pacientes</h5>
-			<div class="p-fluid p-formgrid grid">
-				<div class="field col-12 md:col-6">
-					<label htmlFor="firstname2">Nombre</label>
-					<input pInputText id="firstname2" type="text" />
-				</div>
-				<div class="field col-12 md:col-6">
-					<label htmlFor="lastname2">Apellido</label>
-					<input pInputText id="lastname2" type="text" />
-				</div>
-				<div class="field col-12">
-					<label htmlFor="address">Direccion</label>
-					<input pInputTextarea id="address" rows="4" />
-				</div>
-				<div class="field col-12 md:col-6">
-					<label htmlFor="city">Ciudad</label>
-					<input pInputText id="city" type="text" />
-				</div>
-				<div class="field col-12 md:col-3">
-					<label htmlFor="state">Genero</label>
-					<p-dropdown [options]="dropdownItems" optionLabel="name" [(ngModel)]="selectedState"></p-dropdown>
-				</div>
-				<div class="field col-12 md:col-3">
-					<label htmlFor="zip">Codigo Postal</label>
-					<input pInputText id="zip" type="text" />
-				</div>
-                <button pButton pRipple label="Submit" class="p-button-success"></button>
-			</div>
-		</div>
-	</div>
-
+<div class="col-12">
+    <div class="card">
+      <h5>Alta de pacientes</h5>
+      <div class="p-fluid p-formgrid grid">
+        <div class="field col-12 md:col-6">
+          <label for="firstname2">Nombre</label>
+          <input pInputText id="firstname2" type="text" [(ngModel)]="patient.firstName" />
+        </div>
+        <div class="field col-12 md:col-6">
+          <label for="lastname2">Apellido</label>
+          <input pInputText id="lastname2" type="text" [(ngModel)]="patient.lastName" />
+        </div>
+        <div class="field col-12">
+          <label for="address">Direccion</label>
+          <input pInputTextarea id="address" rows="4" [(ngModel)]="patient.address">
+        </div>
+        <div class="field col-12 md:6">
+          <label for="city">Ciudad</label>
+          <input pInputText id="city" type="text" [(ngModel)]="patient.city" />
+        </div>
+        <div class="field col-12 md:6">
+          <label for="gender">Género</label>
+          <input pInputText id="gender" type="text" [(ngModel)]="patient.gender" />
+        </div>
+        <div class="field col-12 md-6">
+          <label for="height">Altura (cm)</label>
+          <input pInputText id="height" type="text" [(ngModel)]="patient.height" />
+        </div>
+        <div class="field col-12 md-6">
+          <label for="weight">Peso (kg)</label>
+          <input pInputText id="weight" type="text" [(ngModel)]="patient.weight" />
+        </div>
+        <div class="field col-12">
+          <label for="disease">Enfermedad</label>
+          <input pInputText id="disease" type="text" [(ngModel)]="patient.disease" />
+        </div>
+        <div class="field col-12">
+          <label for="lastVisit">Última visita</label>
+          <input pCalendar id="lastVisit" [(ngModel)]="patient.lastVisit" placeholder="dd/mm/yyyy">
+        </div>
+        <button pButton pRipple label="Submit" class="p-button-success" (click)="addPatient()"></button>
+      </div>
+    </div>
+  </div>
