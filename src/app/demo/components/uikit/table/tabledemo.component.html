@@ -1,37 +1,32 @@
-<div class="col-12">
-    <div class="card">
-      <h5>Tabla de pacientes</h5>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Sexo</th>
-            <th>Altura (cm)</th>
-            <th>Peso (kg)</th>
-            <th>Enfermedad</th>
-            <th>Última visita</th>
-            <th>Dirección</th>
-            <th>Ciudad</th>
-            <th>Género</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let patient of patients">
-            <td>{{ patient.id }}</td>
-            <td>{{ patient.name }}</td>
-            <td>{{ patient.age }}</td>
-            <td>{{ patient.gender }}</td>
-            <td>{{ patient.height }}</td>
-            <td>{{ patient.weight }}</td>
-            <td>{{ patient.disease }}</td>
-            <td>{{ patient.lastVisit }}</td>
-            <td>{{ patient.address }}</td>
-            <td>{{ patient.city }}</td>
-            <td>{{ patient.gender }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="card">
+    <h5>Tabla de pacientes</h5>
+    <table class="table">
+      <thead>
+        <tr>
+          <th colspan="8" class="title">Información de Pacientes</th>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Sexo</th>
+          <th>Altura (cm)</th>
+          <th>Peso (kg)</th>
+          <th>Enfermedad</th>
+          <th>Última visita</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patients">
+          <td>{{ patient.id }}</td>
+          <td>{{ patient.firstName }} {{ patient.lastName }}</td>
+          <td>{{ patient.age }}</td>
+          <td>{{ patient.gender }}</td>
+          <td>{{ patient.height }}</td>
+          <td>{{ patient.weight }}</td>
+          <td>{{ patient.disease }}</td>
+          <td>{{ patient.lastVisit }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>

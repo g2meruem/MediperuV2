@@ -11,15 +11,15 @@ import { EventService } from './demo/service/event.service';
 import { IconService } from './demo/service/icon.service';
 import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
-import { PatientListComponent } from './patient-list/patient-list.component';
-
+import { PatientListModule } from './patient-list/patient-list.module';
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent, PatientListComponent
+        AppComponent, NotfoundComponent,
     ],
     imports: [
         AppRoutingModule,
-        AppLayoutModule
+        AppLayoutModule,
+        PatientListModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

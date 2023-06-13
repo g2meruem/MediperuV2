@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PatientService } from 'src/app/patient.service';
 
 @Component({
   selector: 'app-tabledemo',
@@ -6,10 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./tabledemo.component.scss']
 })
 export class TableDemoComponent {
-  patients: any[] = [
-    { id: 1, name: 'María Pérez', age: 45, gender: 'Femenino', height: 162, weight: 70, disease: 'Diabetes tipo 2', lastVisit: '12/04/2023' },
-    { id: 2, name: 'Juan González', age: 36, gender: 'Masculino', height: 175, weight: 85, disease: 'Hipertensión', lastVisit: '05/02/2023' },
-    { id: 3, name: 'Sofía Rodríguez', age: 24, gender: 'Femenino', height: 168, weight: 62, disease: 'Asma', lastVisit: '18/01/2023' },
-    // Agrega más pacientes aquí
-  ];
+  patients: any[] = [];
+
+  constructor(private patientService: PatientService) {}
+
+  ngOnInit() {
+    this.patientService.patientAdded.subscribe((patient: any) => {
+      this.addPatient(patient);
+    });
+  }
+
+  addPatient(patient: any) {
+    this.patients.push(patient);
+    console.log(this.patients);
+  }
 }

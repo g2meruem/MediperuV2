@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-formlayoutdemo',
@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./formlayoutdemo.component.scss']
 })
 export class FormLayoutDemoComponent {
-  patients: any[] = [];
+  @Output() patientAdded: EventEmitter<any> = new EventEmitter<any>();
+
   patient: any = {};
 
   addPatient() {
-    this.patients.push(this.patient);
-    this.patient = {};
+    this.patientAdded.emit(this.patient);
+    console.log(this.patient);
   }
 }
