@@ -1,138 +1,26 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Customer, Representative } from 'src/app/demo/api/customer';
-import { CustomerService } from 'src/app/demo/service/customer.service';
-import { Product } from 'src/app/demo/api/product';
-import { ProductService } from 'src/app/demo/service/product.service';
-import { Table } from 'primeng/table';
-import { MessageService, ConfirmationService } from 'primeng/api';
-
-interface expandedRows {
-    [key: string]: boolean;
-}
+import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './tabledemo.component.html',
-    providers: [MessageService, ConfirmationService]
+  selector: 'app-tabledemo',
+  templateUrl: './tabledemo.component.html',
+  styleUrls: ['./tabledemo.component.scss']
 })
-export class TableDemoComponent implements OnInit {
+export class TableDemoComponent {
+  patients: any[] = [];
 
-    customers1: Customer[] = [];
-
-    customers2: Customer[] = [];
-
-    customers3: Customer[] = [];
-
-    selectedCustomers1: Customer[] = [];
-
-    selectedCustomer: Customer = {};
-
-    representatives: Representative[] = [];
-
-    statuses: any[] = [];
-
-    products: Product[] = [];
-
-    rowGroupMetadata: any;
-
-    expandedRows: expandedRows = {};
-
-    activityValues: number[] = [0, 100];
-
-    isExpanded: boolean = false;
-
-    idFrozen: boolean = false;
-
-    loading: boolean = true;
-
-    @ViewChild('filter') filter!: ElementRef;
-
-    constructor(private customerService: CustomerService, private productService: ProductService) { }
-
-    ngOnInit() {
-        this.customerService.getCustomersLarge().then(customers => {
-            this.customers1 = customers;
-            this.loading = false;
-
-            // @ts-ignore
-            this.customers1.forEach(customer => customer.date = new Date(customer.date));
-        });
-        this.customerService.getCustomersMedium().then(customers => this.customers2 = customers);
-        this.customerService.getCustomersLarge().then(customers => this.customers3 = customers);
-        this.productService.getProductsWithOrdersSmall().then(data => this.products = data);
-
-        this.representatives = [
-            { name: 'Amy Elsner', image: 'amyelsner.png' },
-            { name: 'Anna Fali', image: 'annafali.png' },
-            { name: 'Asiya Javayant', image: 'asiyajavayant.png' },
-            { name: 'Bernardo Dominic', image: 'bernardodominic.png' },
-            { name: 'Elwin Sharvill', image: 'elwinsharvill.png' },
-            { name: 'Ioni Bowcher', image: 'ionibowcher.png' },
-            { name: 'Ivan Magalhaes', image: 'ivanmagalhaes.png' },
-            { name: 'Onyama Limba', image: 'onyamalimba.png' },
-            { name: 'Stephen Shaw', image: 'stephenshaw.png' },
-            { name: 'XuXue Feng', image: 'xuxuefeng.png' }
-        ];
-
-        this.statuses = [
-            { label: 'Unqualified', value: 'unqualified' },
-            { label: 'Qualified', value: 'qualified' },
-            { label: 'New', value: 'new' },
-            { label: 'Negotiation', value: 'negotiation' },
-            { label: 'Renewal', value: 'renewal' },
-            { label: 'Proposal', value: 'proposal' }
-        ];
-    }
-
-    onSort() {
-        this.updateRowGroupMetaData();
-    }
-
-    updateRowGroupMetaData() {
-        this.rowGroupMetadata = {};
-
-        if (this.customers3) {
-            for (let i = 0; i < this.customers3.length; i++) {
-                const rowData = this.customers3[i];
-                const representativeName = rowData?.representative?.name || '';
-
-                if (i === 0) {
-                    this.rowGroupMetadata[representativeName] = { index: 0, size: 1 };
-                }
-                else {
-                    const previousRowData = this.customers3[i - 1];
-                    const previousRowGroup = previousRowData?.representative?.name;
-                    if (representativeName === previousRowGroup) {
-                        this.rowGroupMetadata[representativeName].size++;
-                    }
-                    else {
-                        this.rowGroupMetadata[representativeName] = { index: i, size: 1 };
-                    }
-                }
-            }
-        }
-    }
-
-    expandAll() {
-        if (!this.isExpanded) {
-            this.products.forEach(product => product && product.name ? this.expandedRows[product.name] = true : '');
-
-        } else {
-            this.expandedRows = {};
-        }
-        this.isExpanded = !this.isExpanded;
-    }
-
-    formatCurrency(value: number) {
-        return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-    }
-
-    onGlobalFilter(table: Table, event: Event) {
-        table.filterGlobal((event.target as HTMLInputElement).value, 'contains');
-    }
-
-    clear(table: Table) {
-        table.clear();
-        this.filter.nativeElement.value = '';
-    }
-    
+  constructor() {
+    // Rellena la lista de pacientes con datos de pacientes argentinos
+    this.patients = [
+      { id: 1, firstName: 'Carlos', lastName: 'Gómez', age: 35, gender: 'Masculino', height: 175, weight: 70, city: 'Buenos Aires', disease: 'Hipertensión', lastVisit: '2023-06-01' },
+      { id: 2, firstName: 'María', lastName: 'Rodríguez', age: 28, gender: 'Femenino', height: 165, weight: 60, city: 'Córdoba', disease: 'Gripe', lastVisit: '2023-05-28' },
+      { id: 3, firstName: 'Luis', lastName: 'Fernández', age: 45, gender: 'Masculino', height: 180, weight: 80, city: 'Rosario', disease: 'Diabetes', lastVisit: '2023-05-30' },
+      { id: 4, firstName: 'Ana', lastName: 'González', age: 32, gender: 'Femenino', height: 160, weight: 55, city: 'Mendoza', disease: 'Asma', lastVisit: '2023-06-02' },
+      { id: 5, firstName: 'Juan', lastName: 'Pérez', age: 40, gender: 'Masculino', height: 175, weight: 85, city: 'La Plata', disease: 'Artritis', lastVisit: '2023-05-29' },
+      { id: 6, firstName: 'Laura', lastName: 'López', age: 30, gender: 'Femenino', height: 170, weight: 65, city: 'Tucumán', disease: 'Migraña', lastVisit: '2023-05-31' },
+      { id: 7, firstName: 'Diego', lastName: 'Silva', age: 48, gender: 'Masculino', height: 178, weight: 82, city: 'Mar del Plata', disease: 'Artritis', lastVisit: '2023-06-03' },
+      { id: 8, firstName: 'Sofía', lastName: 'Martínez', age: 36, gender: 'Femenino', height: 162, weight: 58, city: 'Salta', disease: 'Alergias', lastVisit: '2023-06-04' },
+      { id: 9, firstName: 'Pablo', lastName: 'López', age: 42, gender: 'Masculino', height: 180, weight: 85, city: 'San Miguel de Tucumán', disease: 'Depresión', lastVisit: '2023-06-02' },
+      { id: 10, firstName: 'Camila', lastName: 'Fernández', age: 31, gender: 'Femenino', height: 168, weight: 62, city: 'Bahía Blanca', disease: 'Insomnio', lastVisit: '2023-05-30' }
+    ];
+  }
 }

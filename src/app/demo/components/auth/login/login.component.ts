@@ -1,23 +1,28 @@
 import { Component } from '@angular/core';
-import { LayoutService } from 'src/app/layout/service/app.layout.service';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    styles: [`
-        :host ::ng-deep .pi-eye,
-        :host ::ng-deep .pi-eye-slash {
-            transform:scale(1.6);
-            margin-right: 1rem;
-            color: var(--primary-color) !important;
-        }
-    `]
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  email: string = '';
+  password: string = '';
+  errorMessage: string = '';
 
-    valCheck: string[] = ['remember'];
+  constructor(private router: Router) { }
 
-    password!: string;
+  signIn() {
+    const email = 'doctorperez@gmail.com';
+    const password = 'awadeuwu123';
 
-    constructor(public layoutService: LayoutService) { }
+    if (this.email === email && this.password === password) {
+      // Credenciales válidas, redirigir al dashboard
+      this.router.navigate(['/dashboard']);
+    } else {
+      // Credenciales inválidas, mostrar mensaje de error
+      this.errorMessage = 'Credenciales inválidas';
+    }
+  }
 }

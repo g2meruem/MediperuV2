@@ -11,17 +11,15 @@ import { EventService } from './demo/service/event.service';
 import { IconService } from './demo/service/icon.service';
 import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
-import { PasswordModule } from 'primeng/password';
-import { RegisterModule } from './register/register.module';
+import { PatientListModule } from './patient-list/patient-list.module';
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent
+        AppComponent, NotfoundComponent,
     ],
     imports: [
         AppRoutingModule,
         AppLayoutModule,
-        PasswordModule,
-        RegisterModule
+        PatientListModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
